@@ -80,7 +80,7 @@ def test_load_vgg(load_vgg, tf_module):
     :param tf_module: The tensorflow module import
     """
     with TmpMock(tf_module.saved_model.loader, 'load') as mock_load_model:
-        vgg_path = ''
+        vgg_path = 'data/vgg'
         sess = tf.Session()
         test_input_image = tf.placeholder(tf.float32, name='image_input')
         test_keep_prob = tf.placeholder(tf.float32, name='keep_prob')
